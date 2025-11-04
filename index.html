@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Preload do CSS crítico -->
+    <!-- Preload da imagem LCP para carregamento imediato -->
+    <link rel="preload" 
+          href="assets/img/green-tech-banner.png" 
+          as="image"
+          fetchpriority="high">
+    
+    <!-- Preload do CSS  -->
     <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
     
@@ -16,7 +22,7 @@
       <div class="logo">
         <!-- width="36" height="36" - Tamanho real: reserva espaço antes de carregar -->
         <!-- Evita que a página "pule" -->
-        <img src="/assets/icons/icon-logo.png" 
+        <img src="/assets/icons/icon-logo.webp" 
              alt="Logo ReciclaTech"
              width="36"
              height="36">
@@ -44,14 +50,15 @@
           </div>
         </div>
         <figure class="hero-image">
+          <!-- OTIMIZADO PARA LCP (Largest Contentful Paint) -->
           <!-- width="357" height="332" - Dimensão real: página não pula ao carregar -->
-          <!-- Melhora performance e experiência do usuário -->
-          <!-- loading="lazy" - Carrega só quando o usuário rolar até aqui -->
-          <img src="assets/img/green-tech-banner.png" 
+          <!-- fetchpriority="high" - Prioriza carregamento desta imagem -->
+          <!-- REMOVIDO loading="lazy" - Imagem principal deve carregar imediatamente -->
+          <img src="assets/img/green-tech-banner.webp" 
                alt="Símbolo de reciclagem com placas eletrônicas"
                width="357"
                height="332"
-               loading="lazy">
+               fetchpriority="high">
         </figure>
       </section>
 
