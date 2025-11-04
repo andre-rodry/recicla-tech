@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- SEO: Metadescrição (corrige problema do Lighthouse SEO) -->
+    <meta name="description" content="Plataforma gratuita para doação e aquisição de eletrônicos usados. Conectamos doadores e beneficiários, promovendo sustentabilidade e inclusão digital.">
+    
     <!-- Preload da imagem LCP para carregamento imediato -->
     <link rel="preload" 
-          href="assets/img/green-tech-banner.png" 
+          href="assets/img/green-tech-banner.webp" 
           as="image"
           fetchpriority="high">
     
@@ -14,7 +17,7 @@
     <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="style.css">
     
-    <title>ReciclaTech</title>
+    <title>ReciclaTech - Reciclagem de Eletrônicos</title>
   </head>
   <body>
     <!-- CABEÇALHO -->
@@ -22,7 +25,7 @@
       <div class="logo">
         <!-- width="36" height="36" - Tamanho real: reserva espaço antes de carregar -->
         <!-- Evita que a página "pule" -->
-        <img src="/assets/icons/icon-logo.webp" 
+        <img src="assets/icons/icon-logo.webp" 
              alt="Logo ReciclaTech"
              width="36"
              height="36">
