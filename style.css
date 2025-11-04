@@ -134,7 +134,6 @@ header .logo img {
   padding-inline: 1.6rem;
   margin-top: 0.5rem;
   gap: 20px;
-  /* Escopo restrito aos botões do hero */
 }
 .hero-buttons .btn-donate,
 .hero-buttons .btn-acquire {
