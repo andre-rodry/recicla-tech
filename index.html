@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO: Metadescrição (corrige problema do Lighthouse SEO) -->
+    <!-- SEO: Metadescrição -->
     <meta name="description" content="Plataforma gratuita para doação e aquisição de eletrônicos usados. Conectamos doadores e beneficiários, promovendo sustentabilidade e inclusão digital.">
     
     <!-- Preload da imagem LCP para carregamento imediato -->
@@ -23,9 +23,16 @@
     <!-- CABEÇALHO -->
     <header>
       <div class="logo">
-        <!-- width="36" height="36" - Tamanho real: reserva espaço antes de carregar -->
-        <!-- Evita que a página "pule" -->
-        <img src="assets/icons/icon-logo.webp" 
+        <!-- srcset: 3 versões da imagem para diferentes resoluções de tela -->
+        <!-- 36w = telas normais | 54w = telas 1.5x | 72w = telas Retina 2x -->
+        <!-- sizes="36px": informa ao navegador que a imagem será exibida com 36px -->
+        <!-- O navegador escolhe automaticamente a melhor versão para cada dispositivo -->
+        <!-- width e height: dimensões reservam espaço e evitam que a página "pule" ao carregar -->
+        <img src="assets/icons/logo-36.webp"
+             srcset="assets/icons/logo-36.webp 36w,
+                     assets/icons/logo-54.webp 54w,
+                     assets/icons/logo-72.webp 72w"
+             sizes="36px"
              alt="Logo ReciclaTech"
              width="36"
              height="36">
@@ -56,7 +63,6 @@
           <!-- OTIMIZADO PARA LCP (Largest Contentful Paint) -->
           <!-- width="357" height="332" - Dimensão real: página não pula ao carregar -->
           <!-- fetchpriority="high" - Prioriza carregamento desta imagem -->
-          <!-- REMOVIDO loading="lazy" - Imagem principal deve carregar imediatamente -->
           <img src="assets/img/green-tech-banner.webp" 
                alt="Símbolo de reciclagem com placas eletrônicas"
                width="357"
