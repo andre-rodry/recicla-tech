@@ -128,9 +128,9 @@ header {
   .hero-description {
     font-size: 1.1rem;
     text-align: left;
-    padding-block: 0.9rem;
+    padding-block: .9rem;
     line-height: 1.4;
-    letter-spacing: 0.5px;
+    letter-spacing: .5px;
     padding-inline: 1.6rem;
   }
 
@@ -143,14 +143,14 @@ header {
 .hero-buttons {
   display: flex;
   padding-inline: 1.6rem;
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   gap: 20px;
 
   .btn-donate,
   .btn-acquire {
-    font-size: 0.9rem;
+    font-size: .9rem;
     display: inline-block;
-    padding: 0.6em 1.2em;
+    padding: .6em 1.2em;
     font-weight: 400;
     border-radius: 4px;
     white-space: nowrap;
@@ -180,6 +180,172 @@ header {
   }
 }
 
+/* ========================================
+    SEÇÃO ESTATÍSTICAS
+======================================== */
+.stats-list {
+  display: flex;
+  justify-content: center;
+  padding-inline: 1.6rem;
+  background-color: #F3F5F8;
+
+  .stat-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-block: .6rem;
+
+    dt {
+      font-size: 1.3rem;
+      text-align: center;
+      color: #16A34A;
+      font-weight: 700;
+    }
+
+    dd {
+      font-size: .8rem;
+      color: #4B5563;
+      font-weight: 400;
+      letter-spacing: .5px;
+      text-align: center;
+      padding-block: .6em;
+
+      .stat-label {
+        display: block;
+      }
+    }
+  }
+}
+
+/* ========================================
+     SEÇÃO COMO FUNCIONA
+======================================== */
+
+.how-it-works {
+  text-align: center;
+  padding-inline: 1.3rem;
+
+  .how-title {
+    font-size: 1.7rem;
+    padding: 0.9em 0 0.4em 0;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    padding: 0 0 2em 0;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+
+    .highlight {
+      display: block;
+    }
+  }
+}
+
+.user-types {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  .user-type {
+    padding-inline: 0.8em;
+    padding-block: 2em;
+    border-radius: 7px;
+    background-color: #F3F5F8;
+
+    .description {
+      font-weight: 400;
+      color: #4B5563;
+      padding: 0.7em 0 1.5em 0;
+      text-align: left;
+    }
+
+    ol {
+      text-align: left;
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.9em;
+        gap: 0.6em;
+
+        .step-number {
+          width: 1.8rem;
+          height: 1.8rem;
+          line-height: 1.8rem;
+          text-align: center;
+          border-radius: 50%;
+          color: #ffffff;
+          background-color: #16A34A;
+          font-weight: 600;
+          font-size: 0.9rem;
+          flex-shrink: 0;
+          display: inline-block;
+        }
+
+        .step-content {
+          .step-title {
+            font-weight: 700;
+            color: #09090B;
+            font-size: 1.2em;
+          }
+
+          .step-text {
+            color: #4B5563;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  .acquirer {
+    margin-top: 1.3em;
+    background-color: #F3F5F8;
+  }
+}
+
+.user-type-header {
+  display: flex;
+  align-items: center;
+  padding-block: 0.6em;
+  gap: 0.5em;
+
+  .user-type-title {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    margin-left: 0.5em;
+  }
+
+  .icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
+  &.donor .icon {
+    background-color: #DCFCE7; 
+  }
+
+  &.acquirer .icon {
+    background-color: #DBEAFE; 
+  }
+}
+
+/* cores específicas para os títulos */
+.donor-title {
+  color: #16A34A;
+}
+
+.acquirer-title {
+  color: #2563EB;
+}
 
 
 
