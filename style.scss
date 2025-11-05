@@ -11,6 +11,17 @@
 }
 
 /* ========================================
+   BASE - CORREÇÃO DA FONTE
+======================================== */
+:root {
+  font-size: 16px; /* Define base para cálculos em rem */
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ========================================
    HEADER
 ======================================== */
 
@@ -74,7 +85,7 @@ header {
     }
 
     a {
-      font-size: 1.1em;
+      font-size: 1.1rem; /* Mudado de em para rem */
       font-weight: 400;
       white-space: nowrap;
       color: #4B5563;
@@ -88,7 +99,7 @@ header {
       font-size: 1rem;
       display: inline-block;
       margin-top: .5rem;
-      padding: .7em 1.7em;
+      padding: .7rem 1.7rem; /* Mudado de em para rem */
       font-weight: 400;
       color: #FFFFFF;
       border-radius: 5px;
@@ -150,7 +161,7 @@ header {
   .btn-acquire {
     font-size: .9rem;
     display: inline-block;
-    padding: .6em 1.2em;
+    padding: .6rem 1.2rem; /* Mudado de em para rem */
     font-weight: 400;
     border-radius: 4px;
     white-space: nowrap;
@@ -173,6 +184,7 @@ header {
 .hero-image {
   img {
     width: 80%;
+    max-width: 357px; /* CORREÇÃO: limita tamanho máximo */
     height: auto;
     display: block;
     margin-inline: auto;
@@ -208,7 +220,7 @@ header {
       font-weight: 400;
       letter-spacing: .5px;
       text-align: center;
-      padding-block: .6em;
+      padding-block: .6rem; /* Mudado de em para rem */
 
       .stat-label {
         display: block;
@@ -227,13 +239,13 @@ header {
 
   .how-title {
     font-size: 1.7rem;
-    padding: 0.9em 0 0.4em 0;
+    padding: 0.9rem 0 0.4rem 0; /* Mudado de em para rem */
     font-weight: 700;
   }
 
   .subtitle {
     font-size: 1.1rem;
-    padding: 0 0 2em 0;
+    padding: 0 0 2rem 0; /* Mudado de em para rem */
     line-height: 1.4;
     letter-spacing: 0.5px;
 
@@ -246,18 +258,21 @@ header {
 .user-types {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1.5rem; 
+  padding-inline: 1.3rem; 
+  max-width: 800px; 
+  margin-inline: auto; 
 
   .user-type {
-    padding-inline: 0.8em;
-    padding-block: 2em;
+    padding-inline: 0.8rem; 
+    padding-block: 2rem; 
     border-radius: 7px;
     background-color: #F3F5F8;
 
     .description {
       font-weight: 400;
       color: #4B5563;
-      padding: 0.7em 0 1.5em 0;
+      padding: 0.7rem 0 1.5rem 0; 
       text-align: left;
     }
 
@@ -267,8 +282,8 @@ header {
       .step {
         display: flex;
         align-items: flex-start;
-        margin-bottom: 0.9em;
-        gap: 0.6em;
+        margin-bottom: 0.9rem; 
+        gap: 0.6rem; 
 
         .step-number {
           width: 1.8rem;
@@ -288,7 +303,7 @@ header {
           .step-title {
             font-weight: 700;
             color: #09090B;
-            font-size: 1.2em;
+            font-size: 1.2rem; 
           }
 
           .step-text {
@@ -301,7 +316,7 @@ header {
   }
 
   .acquirer {
-    margin-top: 1.3em;
+    margin-top: 1.3rem; 
     background-color: #F3F5F8;
   }
 }
@@ -309,13 +324,13 @@ header {
 .user-type-header {
   display: flex;
   align-items: center;
-  padding-block: 0.6em;
-  gap: 0.5em;
+  padding-block: 0.6rem; 
+  gap: 0.5rem; 
 
   .user-type-title {
     font-family: Inter, sans-serif;
     font-weight: 400;
-    margin-left: 0.5em;
+    margin-left: 0.5rem; 
   }
 
   .icon {
@@ -348,58 +363,115 @@ header {
 }
 
 
+/* ========================================
+ SEÇÃO PRODUTOS DISPONÍVEIS
+======================================== */
+.available-products {
+  margin-block: 2.7rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: #F3F5F8;
 
+  // Títulos da seção
+  .section-title {
+    margin-top: 1.2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1F2937;
+  }
 
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #4B5563;
+    font-family: "Inter", sans-serif;
+  }
+}
 
+// Container das categorias
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-block: 2rem;
+}
 
+// Card individual de categoria
+.category-card {
+  width: 70vw;
+  max-width: 400px; 
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .category-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .category-content {
+    padding: 1rem;
+    text-align: center;
+
+    .category-title {
+      margin-top: 0.5rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      color: #09090B;
+    }
+
+    .category-description {
+      margin: 0.5rem 0 1.2rem;
+      font-size: 0.95rem;
+      color: #4B5563;
+    }
+
+    .btn-explore {
+      display: inline-block;
+      padding: 0.7rem 1.4rem; 
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      background-color: #21C05C;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  }
+}
 
 
 
 /* ========================================
-   MEDIA QUERIES
+   MEDIA QUERIES - DEBUG ATIVO
 ======================================== */
 
+// /* Celular pequeno - 320px até 479px */
+// @media (min-width: 320px) and (max-width: 479px) {
+//   header { background-color: rgb(225, 76, 173); }
+// }
 
+// /* Celular médio - 480px até 767px */
+// @media (min-width: 480px) and (max-width: 767px) {
+//   header { background-color: orange; }
+// }
 
-/* Celular pequeno - 320px até 479px */
-@media (min-width: 320px) and (max-width: 479px) {
-  header {
-    background-color: rgb(225, 76, 173);
-  }
-}
+// /* Tablet - 768px até 1023px */
+// @media (min-width: 768px) and (max-width: 1023px) {
+//   header { background-color: yellow; color: black; }
+// }
 
-/* Celular médio - 480px até 767px */
-@media (min-width: 480px) and (max-width: 767px) {
-  header {
-    background-color: orange;
-  }
-}
+// /* Desktop pequeno - 1024px até 1365px */
+// @media (min-width: 1024px) and (max-width: 1365px) {
+//   header { background-color: green; }
+// }
 
-/* Tablet - 768px até 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  header {
-    background-color: yellow;
-    color: black;
-  }
-}
+// /* Desktop médio - 1366px até 1919px */
+// @media (min-width: 1366px) and (max-width: 1919px) {
+//   header { background-color: blue; }
+// }
 
-/* Desktop pequeno - 1024px até 1365px */
-@media (min-width: 1024px) and (max-width: 1365px) {
-  header {
-    background-color: green;
-  }
-}
-
-/* Desktop médio - 1366px até 1919px */
-@media (min-width: 1366px) and (max-width: 1919px) {
-  header {
-    background-color: blue;
-  }
-}
-
-/* Desktop grande - a partir de 1920px */
-@media (min-width: 1920px) {
-  header {
-    background-color: purple;
-  }
-}
+// /* Desktop grande - a partir de 1920px */
+// @media (min-width: 1920px) {
+//   header { background-color: purple; }
+// }
